@@ -1,13 +1,14 @@
-import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
-  compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  modules: ['@nuxt/ui'],
-  css: ['~/assets/css/main.css'],
-  vite: {
-    plugins: [
-      tailwindcss(),
-    ],
+  nitro: {
+    prerender: {
+      failOnError: false
+    }
   },
+  modules: [
+    '@nuxt/ui',
+    // '@nuxtjs/tailwindcss' // Optionnel, si vous souhaitez la gestion automatique
+  ],
+  css: ['~/assets/css/main.css'],
 });
 

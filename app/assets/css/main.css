@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+/* Styles globaux pour les pages */
+.page-title {
+	@apply text-3xl font-bold text-blue-700 mb-6;
+}
+
+.listing {
+	@apply grid grid-cols-1 md:grid-cols-2 gap-4 mb-8;
+}
+
+.listing li {
+	@apply bg-white rounded-lg shadow p-4 hover:bg-blue-50 transition;
+}
+
+/* Style pour le bouton custom */
+.my-button {
+	@apply px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition font-semibold;
+}
